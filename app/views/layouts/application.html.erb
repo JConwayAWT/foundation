@@ -6,9 +6,9 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-spy='scroll'>
 
-  <nav class="navbar navbar-default navbar-height navbar-styled">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-height navbar-styled" id="homepage-navbar">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -37,3 +37,31 @@
 
 </body>
 </html>
+
+<script>
+  $(document).ready(function(){
+    var is_transparent_now = true;
+
+    $(window).scroll(function(){
+      if( $(window).scrollTop() < 15 && !is_transparent_now){
+        is_transparent_now = true;
+        $(".navbar-right-link").animate({
+          color: $.Color(255, 255, 255, 0.75)
+        }, 500);
+        $("#homepage-navbar").animate({
+          backgroundColor: $.Color(255, 255, 255, 0)
+        }, 500);
+      }
+      else if ( $(window).scrollTop() >= 15 && is_transparent_now )
+      {
+        is_transparent_now = false;
+        $(".navbar-right-link").animate({
+          color: $.Color(0, 0, 0, 0.7)
+        }, 500);
+        $("#homepage-navbar").animate({
+          backgroundColor: $.Color(255, 255, 255, 0.95)
+        }, 500);
+      }
+    })
+  });
+</script>

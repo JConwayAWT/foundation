@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require jquery-tablesorter/theme.bootstrap
+ *= require jquery.ui.all
  */
 
 @import "bootstrap";
@@ -27,7 +28,17 @@ $font-color-for-dark-backgrounds: white;
   z-index: 1000;
 }
 
+.navbar-white-trans{
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.black-link{
+  color: rgba(0, 0, 0, 0.76) !important;
+}
+
 .navbar-styled{
+  right: 0;
+  width: 100%;
   background-color: transparent;
   border: none;
   margin-bottom: 0px;
@@ -40,8 +51,6 @@ $font-color-for-dark-backgrounds: white;
         font-size: 19px;
         opacity: 0.75;
         color: white;
-        padding-top: 28px;
-        padding-bottom: 0px;
         -webkit-transition: opacity 250ms ease-in-out;
         -moz-transition: opacity 250ms ease-in-out;
         -o-transition: opacity 250ms ease-in-out;
@@ -85,9 +94,6 @@ $font-color-for-dark-backgrounds: white;
 }
 
 .background-image{
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   max-width: 100%;
   height: auto;
 }
