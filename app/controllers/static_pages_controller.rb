@@ -2,15 +2,15 @@ class StaticPagesController < ApplicationController
   before_action :set_static_page, only: [:show, :edit, :update, :destroy]
 
   @@AVAILABLE_IMAGES = [
-    # "chemistry_background.jpg",
-    # "astronomy_background.jpg",
-    # "fibonacci_spiral_wallpaper.png",
-    # "leaf_wallpaper.jpg",
-    # "green_water_drop_background.jpg",
-    # "processor_wallpaper.jpg",
+    "chemistry_background.jpg",
+    "astronomy_background.jpg",
+    "fibonacci_spiral_wallpaper.png",
+    "leaf_wallpaper.jpg",
+    "green_water_drop_background.jpg",
+    "processor_wallpaper.jpg",
     "carnegie_mellon_background.JPG",
-    # "double_helix_background.jpg",
-    # "snowflake_background.jpg"
+    "double_helix_background.jpg",
+    "snowflake_background.jpg"
   ]
 
   # GET /static_pages
