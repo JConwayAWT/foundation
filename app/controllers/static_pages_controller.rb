@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
 
   @@AVAILABLE_IMAGES = [
     "chemistry_background.jpg",
-    "astronomy_background.jpeg",
+    "astronomy_background.jpg",
     "fibonacci_spiral_wallpaper.png",
     "leaf_wallpaper.jpg",
     "green_water_drop_background.jpg",
