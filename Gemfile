@@ -29,7 +29,7 @@ gem 'slim'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'rails_12factor', group: :production
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '4.2.1'
 
 # kill this one if you're not having user authentication
 # gem 'devise'
